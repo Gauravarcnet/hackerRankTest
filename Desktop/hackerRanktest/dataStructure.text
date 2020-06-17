@@ -1,0 +1,11 @@
+Data strucure:
+    are colleciton of values, the relationship among them 
+    and the function or the operation can be applied to the data 
+
+    class: 
+        a blueprint for creating objects with pre-defined properties and
+        methods
+
+        the methods to create a new objects must be called constructor
+        the class keyword creates constant, so you can not redefine it
+        
