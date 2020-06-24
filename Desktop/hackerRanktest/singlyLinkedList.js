@@ -94,7 +94,7 @@ class Link{
     }
     set(index,value){
         let node = get(index)
-        if(!node) return undefifalsened
+        if(!node) return undefined
         node.element = value
         return true
     }
