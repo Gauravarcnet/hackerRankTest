@@ -29,33 +29,53 @@
 //     }
 //     return array
 // }
-//     function swap(arr,i,j) {
-//         // let temp = arr[i]        // old way
-//         //     arr[i] = arr[j]
-//         //     arr[j] = temp
-//             [arr[i], arr[j]] = [arr[j], arr[i]] // es15 way of swapping
-//         // return arr
-//     }
-
-
-
-function bubbleSorting1(arr){
-    let noSwaps
-    function swap (array,index1, index2){
-        [array[index1],array[index2]] = [array[index2],array[index1]]
-        return array
+    function swap(arr,i,j) {
+        // let temp = arr[i]        // old way
+        //     arr[i] = arr[j]
+        //     arr[j] = temp
+            [arr[i], arr[j]] = [arr[j], arr[i]] // es15 way of swapping
+        // return arr
     }
-    for(let i = arr.length; i > 0 ;i--){
-        noSwaps = true
-         for (let j = 0; j < i-1; j++) {
-             if(arr[j] > arr[j+1]){
-                 swap(arr,j,j+1)
-                 noSwaps =false
-             }
-         }
-         if(noSwaps) break
+
+
+
+// function bubbleSorting1(arr){
+//     let noSwaps
+//     function swap (array,index1, index2){
+//         [array[index1],array[index2]] = [array[index2],array[index1]]
+//         return array
+//     }
+//     for(let i = arr.length; i > 0 ;i--){
+//         noSwaps = true
+//          for (let j = 0; j < i-1; j++) {
+//              if(arr[j] > arr[j+1]){
+//                  swap(arr,j,j+1)
+//                  noSwaps =false
+//              }
+//          }
+//          if(noSwaps) break
+//     }
+//     return arr
+// }
+// console.log(bubbleSorting1([1,5,67,36,5,10]));
+
+
+function bubbleSorting1(arr) {
+    let noSwap
+    for (let i = arr.length; i > 0; i--){
+        noSwap = true
+        for (let j = 0; j < i-1; j++) {
+            if(arr[j]>arr[j+1]){
+                swap(arr,j,j+1)
+                noSwap = false
+            }
+            
+        }
+        if(noSwap) break
+        
     }
     return arr
+    
 }
 console.log(bubbleSorting1([1,5,67,36,5,10]));
 

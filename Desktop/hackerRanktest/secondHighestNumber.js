@@ -5,7 +5,8 @@ function secondHighest(array) {
     let max,
         max2
     if(array[1] > array[0]){
-        max = array[1]
+        max = array[1],
+        max2 = array[0]
     }else{
         max2 = max
         max = array[1]
@@ -24,4 +25,4 @@ function secondHighest(array) {
         "max2": max2
     }
 }
-console.log(secondHighest([1,5,3,7,9,2,5,45,79,85,15]));
+console.log(secondHighest([10,5,3,7,9,2,5,45,79,85,82,115]));

@@ -38,4 +38,4 @@ when the function happens to be used as a constructor with the <i>new</i> keywor
 
   * Symbol
   https://flaviocopes.com/javascript-symbols/
-  * /
+  * 
