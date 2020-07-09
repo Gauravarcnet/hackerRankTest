@@ -1,0 +1,173 @@
+*** Question : Name lifecycle methods and their purpose?
+Answer : lifecycle methods are changing for example 
+
+        there are 2 phases when we render component the initial vendor 
+        breed vendor.
+            so the first is render when the component intially renders.
+                the first hooks run is constructor this runs only one 
+                during the initial phase  , the job is to set initial 
+                state 
+
+        static getDerivedStateFromProps : 
+
+        render: 
+            this return the body of(jsx), it is a mandatory method
+            to have. here u cannot set state
+
+        componentDidMount:
+            this method runs after the component is actually mounted
+            and the use of this method is if u are usin gsome third-party
+            lib some charting lib and such and so basically u can notify
+            that DOM is ready now
+
+
+    reRender
+
+        whenever their is change right which means this lifecycle 
+        would run many times as changes
+
+            static getDerivedStateFromProps : 
+            shouldComponentUpdate:
+                if this componnet really need to be updated or not
+                and why  would u need it let say whenvr sb say 
+                said state every rendered rush.
+
+                    in it we compare prev state and new state and compare 
+                    if change then return true otherwise return false.
+                    So there is no render.
+
+            getSnapshotBeforeUpdate:
+                we call it free commit phase.
+                render does not mean it has render mount.
+                mount really happens after this method.
+
+            componentDidMount:
+            componentWillUnmount
+
+
+Question : why do we use arrow fx in react?
+Ans : in rect we have onclick handles which is not actually
+        a class method its actually property so we haev to diff 
+        btw what is method and what is a property
+
+        arrow function don't have their own this so it takes 
+        it from lexial scope.
+
+Question: HOw to prevent component from re-rendering?
+Answer : 
+        shouldComponentUpdate(): so we can use this method before 
+                                rendering should need to render or not
+
+        React.PureComponent : if we use React.PureComponent and shouldComponentUpdate()
+                            togather it would complain
+        React.memo
+
+Question : what are the features of react?
+Answer : jsx is used to describe what the UI should look like
+         componnet is like a function that returns html elemnts.
+         speedy performance as only the changed components are updated.
+         react has many extension for completeapplication architecture.
+         one way data binding keeps everything modular and fast.
+         virtual DOM is a lightweight representation of real DOM.
+
+
+         JSx: syntax extension to js
+
+
+Question : Can jsx directly read by browser?
+Answer : no, bcs it built to read only regular js objects and jsx is not a 
+            regular js.
+        babel APi convert jsx to js which is internally used.
+
+Question : What do u mean by VIrtual DOM?
+Answer :react keeps a lightweight representation of the real DOM in the meory
+        and that is known as virtualtual DOM(Document Object Model).
+
+        When the state of object changes virtual DOM changes only tht object 
+         in real DOM instead of updating whole.
+
+Quation : why use react instead other framw=ework(angular)?
+Answer : Easy creation of dynamic web apps.
+        reusable components
+        enhanced performance
+        easy debugging
+        uniderctional data flow.
+
+
+        Angular : it simplifies the process of complicated and simple application
+                    flow. but when rendering comes many items (especlly ng-repeat)
+                    you notice angular struggle.BUt it sucks when rendering 
+                    lots of items.
+
+                The issue with AngularJS is that it works on the premise of 
+                directly watching and modifying the DOM (using dirty checking). 
+                In the instance of a large amount of “ng-repeat” items, if you 
+                have watchers on potentially thousands of elements in the page,
+                it does not take a computer scientist to work out what will happen:
+                performance will suffer.
+
+                The premise of ReactJS is something it calls a virtual DOM. This is 
+                an in-memory representation of your DOM, when a change is made, it is
+                 made in memory and the DOM is subsequently updated when needed.
+
+                Rather than checking the DOM for what has changed and what needs to be
+                updated, all of this is handled in memory which results in blazingly 
+                fast mass updates and changes to the DOM because the heavy work is being
+                off-lifted outside of the page itself.
+
+
+
+
+        create-react-app my-first-app
+
+QUestion : A synthetic event is an obj which acts as cross-browser 
+            wrapper around the browser's natve event.
+
+        it combines the behaviour of diff browser native event 
+        into one API and this makes sure tht the events are consistent
+        across diff browser.
+
+Question : how list work
+Answer : list data in ordered formatt.
+            traversal of list done using map method
+
+Question : why do we need key ?
+Ans : key unique identifier?
+      it is used to identify which item updated, deleted or changed
+
+      it also which component need to be re-render again iinstead of re-rendering 
+      all components.
+
+      it also incs performance as only the change component is re-rendered.
+
+Question; what is form?
+Ans : user can interact with the app and enter the reqired information whenever needed.
+        and can also used for authentiacvation, searching, filtering
+
+Question : how to create forms?
+Answer : 
+
+Ques; components
+Ans : components are building blocks of any react application 
+        it splits ui into multiple resuable componnets tht can processed seprately
+
+Ques: Render?
+Answer : compulsory for each component to have render functin
+            return html which is to be displyed in a component
+
+Question : state?
+Answer ; holds some data of a component state
+            the data influence output of a component
+
+
+Question : setState
+
+            this.state  = {
+                message:"
+            }
+
+            this.setState({
+                message:""
+            })
+
+
